@@ -31,7 +31,10 @@
 						<td>${emp.no } </td>
 						<td>${emp.name } </td>
 						<td>${emp.title.name } </td>
-						<td>${emp.manager.name } (${emp.manager.no }) </td>						
+						<td>
+							<c:if test="${emp.manager.no==0}"> </c:if>
+							<c:if test="${emp.manager.no!=0}">${emp.manager.name}(${emp.manager.no})</c:if>	
+						</td>		
 						<td><fmt:formatNumber value="${emp.salary}" pattern="#,###"/> </td>
 						<td>${emp.dept.name}</td>
 						<td><fmt:formatDate value="${emp.hireDate}" pattern="yyyy년 MM월 dd일"/></td>
