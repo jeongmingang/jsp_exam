@@ -24,7 +24,7 @@ select dept_No, dept_Name, floor from department where dept_No = 1;
 
 insert into department values(5, '마케팅', 20);
 
-update department set dept_Name = '회계' where dept_No = 5;
+update department set dept_Name = '회계', floor = 10 where dept_No = 5;
 delete from department where dept_No = 5;
 
 
@@ -65,14 +65,8 @@ select emp_no, emp_name, title_no, title_name, manager_no, manager_name, salary,
  where emp_no = 1003;
     	
 select * from vw_full_employee;
-
-select emp_no, emp_name, tno as title_no, manager as manager_no, salary, dno as deptNo
-  from employee;
  
--- 부서가 1인 사원정보를 출력
-select emp_no, emp_name, tno, manager, salary, dno
-  from employee 
- where dno = (select dept_No from department where dept_No = 3);
+
 
 
 

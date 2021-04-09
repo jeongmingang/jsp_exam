@@ -8,7 +8,6 @@
 	<title>데이터베이스 연동 테스트</title>
 </head>
 <body>
-데이터데이터데이터 연동 테스트테스트
-<%=JndiDS.getConnection() %>
-</body>
+
+<%=JndiDS.getConnection() %></body>
 </html>
